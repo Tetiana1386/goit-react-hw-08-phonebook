@@ -1,0 +1,41 @@
+.List {
+  margin-top: 30px;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.Text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Span {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.Button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+
+  background-image: url(../../img/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

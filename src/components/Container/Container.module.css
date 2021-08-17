@@ -1,0 +1,9 @@
+.Container {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  text-align: center;
+  background-color: rgb(242, 219, 252);
+  border-radius: 7px;
+}
