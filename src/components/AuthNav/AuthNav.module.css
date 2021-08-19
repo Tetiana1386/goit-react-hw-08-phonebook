@@ -1,0 +1,11 @@
+.Link {
+  display: inline-block;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primaryTextColor);
+}
+
+.ActiveLink {
+  color: var(--accentColor);
+}
