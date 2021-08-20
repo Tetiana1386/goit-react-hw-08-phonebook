@@ -1,0 +1,24 @@
+.Wrapper {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.Title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 30px;
+  background: linear-gradient(to right, #833ab4, #f50057, #fcb045, #b345fc) 55%
+    0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Info {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  background: linear-gradient(to right, #833ab4, #eb3f7b, #ee8961, #b345fc) 47%
+    0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

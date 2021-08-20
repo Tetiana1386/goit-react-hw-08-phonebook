@@ -11,7 +11,7 @@ import {
   deleteContactError,
 } from './contacts-actions';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+//axios.defaults.baseURL = 'http://localhost:3000';
 
 export const fetchContacts = () => async dispatch => {
   dispatch(fetchContactsRequest());
@@ -21,7 +21,7 @@ export const fetchContacts = () => async dispatch => {
 
     dispatch(fetchContactsSuccess(data));
   } catch (error) {
-    dispatch(fetchContactsError(error));
+    dispatch(fetchContactsError(error.message));
   }
 };
 
