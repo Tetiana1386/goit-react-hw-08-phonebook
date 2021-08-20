@@ -1,4 +1,3 @@
-//import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsOperations, contactsSelectors } from '../../redux/contacts';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -11,8 +10,6 @@ const ContactList = () => {
   const dispatch = useDispatch();
   const visibleContacts = useSelector(contactsSelectors.getVisibleContacts);
   const contacts = useSelector(contactsSelectors.getContacts);
-
-  //useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
 
   return (
     <>
