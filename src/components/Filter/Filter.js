@@ -1,27 +1,36 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsActions, contactsSelectors } from '../../redux/contacts';
+import { motion, AnimatePresence } from 'framer-motion';
+import { variants } from '../../variables/motionVariable';
 import styles from './Filter.module.css';
 
 const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(contactsSelectors.getFilter);
+  const contacts = useSelector(contactsSelectors.getContacts);
 
   return (
-    <label className={styles.Label}>
-      Find contacts by name
-      <input
-        type="text"
-        name="filter"
-        className={styles.Input}
-        value={filter}
-        onChange={event =>
-          dispatch(contactsActions.filterContact(event.target.value))
-        }
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-        required
-      />
-    </label>
+    <>
+      {contacts.length > 0 && (
+        <AnimatePresence>
+          <label className={styles.Label}>
+            <motion.input
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition="transition"
+              variants={variants}
+              className={styles.Input}
+              type="text"
+              value={filter}
+              onChange={event =>
+                dispatch(contactsActions.filterContact(event.target.value))
+              }
+            />
+          </label>
+        </AnimatePresence>
+      )}
+    </>
   );
 };
 

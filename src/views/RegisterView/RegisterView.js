@@ -33,6 +33,8 @@ export default function RegisterView() {
     event.preventDefault();
     if (!name.trim() || !email.trim() || !password.trim()) {
       return toast.error('Not all fields are filled!');
+    } else if (password.length < 8) {
+      return toast.info('Password must be at least 8 characters long!');
     }
     dispatch(authOperations.register({ name, email, password }));
     setName('');

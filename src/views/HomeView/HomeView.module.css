@@ -4,10 +4,11 @@
 }
 
 .Title {
+  margin-top: 50px;
   margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 30px;
-  background: linear-gradient(to right, #833ab4, #f50057, #fcb045, #b345fc) 55%
+  font-weight: 700;
+  font-size: 35px;
+  background: linear-gradient(to bottom, #a242e2, #f3397a, #80694b, #b345fc) 50%
     0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -17,7 +18,7 @@
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 500;
-  background: linear-gradient(to right, #833ab4, #eb3f7b, #ee8961, #b345fc) 47%
+  background: linear-gradient(to bottom, #833ab4, #8a4b61, #ee8961, #b345fc) 50%
     0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

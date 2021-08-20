@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { contactsOperations } from '../../redux/contacts';
+import NumberFormat from 'react-number-format';
+import Button from '@material-ui/core/Button';
 import styles from './ContactForm.module.css';
 
 function ContactForm() {
   const dispatch = useDispatch();
-  //const contacts = useSelector(contactsSelectors.getContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -50,26 +51,27 @@ function ContactForm() {
           required
           value={name}
           onChange={handleChange}
-          placeholder="Ivan Ivanov"
+          placeholder="Enter name"
         />
       </label>
       <label className={styles.Label}>
         Number
-        <input
-          className={styles.Input}
+        <NumberFormat
+          placeholder="Enter phone number"
+          format="(###) ###-##-##"
+          mask="_"
+          pattern="^[0-9\s\(\)\-]{15}"
           type="tel"
           name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-          required
-          onChange={handleChange}
           value={number}
-          placeholder="111-11-11"
+          onChange={handleChange}
+          className={styles.Input}
         />
       </label>
-      <button className={styles.Button} type="submit">
+
+      <Button variant="contained" color="secondary" size="large" type="submit">
         Add contact
-      </button>
+      </Button>
     </form>
   );
 }

@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
-import { variable } from '../../variables/motionVariable';
+import { variants } from '../../variables/motionVariable';
 import styles from './HomeView.module.css';
 
 const HomeView = () => {
@@ -16,7 +16,7 @@ const HomeView = () => {
           animate="animate"
           exit="exit"
           transition="transition"
-          //variable={variable}
+          variants={variants}
         >
           Keep your contacts in a safe place!
         </motion.h1>
@@ -29,7 +29,7 @@ const HomeView = () => {
             animate="animate"
             exit="exit"
             transition="transition"
-            //variable={variable}
+            variants={variants}
           >
             Please, <b>Sign up</b> or <b>Log in</b> to access your contacts.
           </motion.p>
