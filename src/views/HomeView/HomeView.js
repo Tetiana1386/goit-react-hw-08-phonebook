@@ -18,8 +18,20 @@ const HomeView = () => {
           transition="transition"
           variants={variants}
         >
-          Keep your contacts in a safe place!
+          Phonebook
         </motion.h1>
+      </AnimatePresence>
+      <AnimatePresence>
+        <motion.p
+          className={styles.Text}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition="transition"
+          variants={variants}
+        >
+          Keep your contacts in a safe place!
+        </motion.p>
       </AnimatePresence>
       {!isLoggedIn && (
         <AnimatePresence>

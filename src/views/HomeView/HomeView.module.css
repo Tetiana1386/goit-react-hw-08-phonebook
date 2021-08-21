@@ -4,11 +4,17 @@
 }
 
 .Title {
-  margin-top: 50px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 35px;
+  color: #771d50;
+}
+
+.Text {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 35px;
-  color: #d861a6;
+  color: #ca4994;
 }
 
 .Info {
