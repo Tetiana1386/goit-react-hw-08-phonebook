@@ -8,18 +8,12 @@
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 35px;
-  background: linear-gradient(to bottom, #a242e2, #f3397a, #80694b, #b345fc) 50%
-    0%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d861a6;
 }
 
 .Info {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 500;
-  background: linear-gradient(to bottom, #833ab4, #8a4b61, #ee8961, #b345fc) 50%
-    0%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #b678a1;
 }
