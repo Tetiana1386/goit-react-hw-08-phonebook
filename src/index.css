@@ -25,7 +25,8 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   color: var(--primaryTextColor);
-  background-image: url('./img/bg2.jpg');
+  background-image: url('./img/bg2.jpg') no-repeat;
+  background-size: 100%;
 }
 
 img {
